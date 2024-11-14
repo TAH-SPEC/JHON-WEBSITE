@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <style>
+        html{
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #464646;
+}
+
+.boundary{
+    padding: 0px 25px;
+}
+
+
+.pitems-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 30px;    
+}
+
+.pitem{
+    position: relative;
+    flex: 150px 1 1;
+
+    border: solid 1px lightgray;
+    border-radius: 5px;
+}
+
+.pitem-image{
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-sizing: border-box;    
+}
+
+.pitem-info{
+    padding: 5px 10px;
+}
+
+.pitem-info>h2{
+    padding: 2px;
+    margin: 0px;   
+    color:#8a8a8a;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.pitem-info>p{
+    padding: 2px;
+    margin: 0px;    
+}
+
+.pitem-category{
+    color:#a3a2a2;
+    font-size: 12px;
+}
+
+.pitem-price{
+    color:#a3a2a2;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.sec-pitem-fav{
+    position: absolute;
+    top:8px;
+    right:8px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #d3d3d3;
+    color:#464646;
+}
+.header{
+   margin-top: 10px;
+   padding: 10px 0;
+    border-color: black;
+    text-align:center;
+    border-radius: 2%;
+}
+.container{
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.image-container{
+    text-align: center;
+
+
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.from-container{
+    margin: 10px;
+    padding: 10px;
+
+}
+.container {
+    display: flex; /* Enables flexbox layout */
+    justify-content: space-between; /* Aligns items horizontally */
+    align-items: center; /* Aligns items vertically */
+    height: 10px;; /* Optional: set a height for the container */
+}
+.navbar {
+    display: flex; /* Enable Flexbox */
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Center items vertically */
+    background-color: #333; /* Background color for the navbar */
+    padding: 10px 20px; /* Padding for the navbar */
+}
+
+.logo {
+    color: white; /* Logo color */
+    font-size: 24px; /* Logo font size */
+}
+
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Enable Flexbox for the list */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.nav-links li {
+    margin: 0 15px; /* Spacing between links */
+}
+
+.nav-links a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    padding: 8px 12px; /* Padding for links */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+.nav-links a:hover {
+    background-color: #555; /* Background color on hover */
+}
+.services {
+    padding: 20px;
+    background-color:#555;
+    text-align: center;
+    }
+.p-container
+{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+.w-container{
+    width: 180px;
+    height: 180px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(212, 145, 145, 0.3); /* Shadow effect */
+
+}
+.image-wrapper {
+    width: 150px; /* Set desired width */
+    height: 150px; /* Set desired height */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 50%; /* Make it round */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(212, 161, 161, 0.3); /* Shadow effect */
+}
+
+
+
+.image-wrapper img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    justify-content: center;
+    text-align: center;
+}
+.pitem-infor>h2{
+
+    padding: 1px;
+    margin: 0px;   
+    color:#8a8a8a;
+    font-size: 14px;
+    font-weight: normal;
+}
+.pitem-prices{
+    color:#a3a2a2;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+ </style>
+<body>
+<head>
+    <title>HTML5 and CSS3 Demos - Page Layout using float </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <body>
+       
+    <header>
+        
+        <h1 style="text-align: center;">  Welcome to Khaddi</h1>
+        <nav class="navbar">
+            <div class="logo">MyLogo</div>
+            <ul class="nav-links">
+              <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1 style="text-align: center;">  New on Sales </h1>
+    </header>
+    <section id="Home">
+        <p>Discover the latest trends in fashion.</p>
+    </section>
+        <main class="boundary" >
+            <section id="Products">
+       
+        <section class="pitems-container">
+            <div class colspan=10> sale</div>
+            <div class="pitem">
+                <div class="sec-pitem-fav">
+                    <i class="far fa-heart"></i>
+                </div>
+                <img src="c:\Users\lenovo t14\Downloads\khadi4.jpg" alt="p1" class="pitem-image" />
+                <div class="pitem-info">
+                    <p class="pitem-category">Dobby | Embroidered</p>
+                    <h2>Tailored 3 Piece</h2>
+                    <p class="pitem-price"><del>Rs.16000</del> Rs.3,000/-</p>
+                    <button> Add to cart</button>
+                </div>
+                </div>
+                <div class colspan=10> sale</div>
+            <div class="pitem">
+                <div class="sec-pitem-fav">
+                    <i class="far fa-heart"></i>
+                </div>
+                <img src="c:\Users\lenovo t14\Downloads\Fiza-Premium-Lawn23-D10-b.webp" alt="p1" class="pitem-image" />
+                <div class="pitem-info">
+                    <p class="pitem-category">Dobby | Embroidered</p>
+                    <h2>Tailored 3 Piece</h2>
+                    <p class="pitem-price"><del>Rs.15000</del> Rs.9,000/-</p>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+            <div class colspan=10> sale</div>
+            <div class="pitem">
+                <div class="sec-pitem-fav">
+                    <i class="far fa-heart"></i>
+                </div>
+                <img src="c:\Users\lenovo t14\Downloads\khadi2.jpg" alt="p1" class="pitem-image" />
+                <div class="pitem-info">
+                    <p class="pitem-category">Dobby | Embroidered</p>
+                    <h2>Tailored 3 Piece</h2>
+                    <p class="pitem-price"><del>Rs.14000</del> Rs.4,000/-</p>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+            <div class colspan=10> sale</div>
+            <div class="pitem">
+                <div class="sec-pitem-fav">
+                    <i class="far fa-heart"></i>
+                </div>
+                <img src="c:\Users\lenovo t14\Downloads\khadi1.jpg" alt="p1" class="pitem-image" />
+                <div class="pitem-info">
+                    <p class="pitem-category">Dobby | Embroidered</p>
+                    <h2>Tailored 3 Piece</h2>
+                    <p class="pitem-prices"><del>Rs.18000</del> Rs.10,000/-</p>
+                    <button>Add to cart</button>
+                </div>
+            </div>         
+            <div class colspan=10> sale</div>
+            <div class="pitem">
+                <div class="sec-pitem-fav">
+                    <i class="far fa-heart"></i>
+                </div>
+                <img src="c:\Users\lenovo t14\Downloads\OIP.jpg" alt="p1" class="pitem-image" />
+                <div class="pitem-info">
+                    <p class="pitem-category">Dobby | Embroidered</p>
+                    <h2>Tailored 3 Piece</h2>
+                    <p class="pitem-price"><del>Rs.22000</del> Rs.6,000/-</p>
+                    <button> Add to cart</button>
+                </div>
+            </div>
+            
+            <div class="w-container">
+                <div class="image-wrapper">
+                    <img src="c:\Users\lenovo t14\Downloads\batik-dress-500x500.webp" alt="Round Image"alt="center">
+                    
+                    </div>
+                    <div class="pitem-infor">
+                        <p class="pitem-category">Dobby | Embroidered</p>
+                        <h2> Tailor 3 price</h2>
+                        <p class="pitem-prices"><del>Rs.22000</del> Rs.6,000/-</p>
+                        <button> Add to cart</button>
+                </div>
+            </div>
+          
+            <div class="w-container">
+                <div class="image-wrapper">
+                    <img src="c:\Users\lenovo t14\Downloads\batik-dress-500x500.webp" alt="Round Image"alt="center">
+                    
+                    </div>
+                    <div class="pitem-infor">
+                        <p class="pitem-category">Dobby | Embroidered</p>
+                        <h2> Tailor 3 price</h2>
+                        <p class="pitem-prices"><del>Rs.22000</del> Rs.6,000/-</p>
+                        <button> Add to cart</button>
+                </div>
+            </div>
+            <div class="w-container">
+                <div class="image-wrapper">
+                    <img src="c:\Users\lenovo t14\Downloads\batik-dress-500x500.webp" alt="Round Image"alt="center">
+                    
+                    </div>
+                    <div class="pitem-infor">
+                        <p class="pitem-category">Dobby | Embroidered</p>
+                        <h2> Tailor 3 price</h2>
+                        <p class="pitem-prices"><del>Rs.22000</del> Rs.6,000/-</p>
+                        <button> Add to cart</button>
+                </div>
+            </div>
+        </section>
+        <div class="p-container">
+        <section id="About">
+        </div>
+            <h2> About us </h2>
+            <p>We are passionate about fashion and quality.</p>
+        </section>
+        </div>
+        <section id="Contact">
+            <h2> Contact us</h2>
+            <p> Email: umerh5712@gmail.com</p>
+            <p><mark>0300-4582670</mark></p>
+        </section>
+      
+
+    
+    <section id="Services">
+        <h2>Our Services</h2>
+        <P>
+<bold>Tailoring and Alterations</bold>
+Custom Fit Services: Provide tailoring for a perfect fit.
+Alteration Requests: Allow customers to request alterations for purchased items.
+<br>
+<bold>Subscription Services</bold>
+Monthly Outfits: Curate and send outfits to customers based on their preferences.
+Box Subscriptions: Seasonal box<div class colspan=10> sale</div>
+            
+
+<bold> Initiatives</bold>
+Recycling Program: Encourage customers to return old clothes for discounts.
+Eco-Friendly Products: Highlight sustainable clothing lines.
+        </P>
+    </main>
+
+     <footer>
+        <p>&copy; 2024 My clothing Store</p>
+     </footer>
+
+
+
+</body>
